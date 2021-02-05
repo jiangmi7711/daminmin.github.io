@@ -1,0 +1,132 @@
+.container {
+  display: grid;
+  background-color: #efecde;
+  grid-template-rows: 650px 300px 200px ;
+  grid-template-columns: 100%;
+  grid-template-areas: 
+  "about"
+  "main"
+  "experience"
+  "contacts"
+}
+
+.header_container {
+  display: inline-block;
+  width: 100%;
+  height: 400px;
+  background-image: url("../images/wall.jpg");
+  background-size: cover;
+  text-align: center;
+}
+
+.header_container h1 {
+  font-size: 4rem;
+}
+
+a.nav-link {
+  font-family: "Nunito", sans-serif;
+  font-size: larger;
+}
+
+.social i {
+  display: inline-block;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding: 20px 35px;
+  font-size: 2rem;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+}
+
+h2 {
+  color: #88856d;
+}
+
+.resume button {
+  border: 2px solid purple;
+  border-radius: 5px;
+  border-style: groove;
+  background-color: #efecde ;
+  width: 40%;
+  height: 36px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+a {
+  color: purple;
+  text-decoration: none;
+}
+
+a:hover 
+{
+  color: white; 
+  text-decoration: none; 
+  cursor: pointer;
+  background: rgb(123,114,43);  
+}
+
+#about {
+  grid-area: about;
+}
+
+#about img{
+  width: 150px;
+  height: 200px;
+  position: relative;
+}
+
+#main {
+  grid-area: main;
+}
+
+#experience {
+  grid-area: experience;
+}
+
+#contacts {
+  grid-area: contacts;
+ }
+
+footer {
+  text-align: center;
+}
+.nestedGrid {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 50% 50%;
+}
+
+/* If small enough */
+@media(max-width:1000px) {
+  .nestedGrid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+  }
+  
+  .header_container h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-rows: 1250px 700px 200px ;
+    grid-template-columns: 100%;
+    grid-template-areas: 
+    "about"
+    "main"
+    "experience"
+    "contacts"
+    }
+
+  .resume button {
+    display: none;
+  }   
+}
